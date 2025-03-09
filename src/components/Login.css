@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    gap: 0.2rem;
+    gap: 1rem;
 }
 
 .welcome{
@@ -29,9 +29,29 @@ h1{
     color: #fff;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+label{
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.input-group:focus-within label {
+    font-size: 1.2em; /* Ingrandisce il label */
+    color: rgb(0, 174, 255); /* Cambia colore per evidenziare */
+    transition: font-size 0.3s ease, color 0.3s ease; /* Aggiunge una transizione fluida */
+}
+
+input:focus{
+    outline-color: rgb(0, 174, 255);
+}
+
 input[type='text'],[type='password']{
     padding: 0.4rem;
-    font-size: x-large;
+    font-size: 1.2rem;
 }
 
 .btn-login,.btn-register{
@@ -43,7 +63,7 @@ input[type='text'],[type='password']{
     outline: none;
     border: none;
     cursor: pointer;
-    transition: background-color,transform 0.7s ease;
+    transition: all 0.4s ease;
 }
 
 .btn-login:hover,.btn-register:hover{
