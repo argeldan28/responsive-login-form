@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Login.css'
 
-export default function Login(){
+export default function Login({ onRegisterClick }){
 
     const [ enteredValue, setEnteredValue ] = useState({
         username: '',
@@ -51,7 +51,7 @@ export default function Login(){
                 <div className='welcome'>
                     <h1>Welcome back!</h1>
                     <p>Please enter your username and password to access your account. Don't forget to check 'Remember me' if you want to stay logged in. If you don’t have an account yet, sign up now to get started!</p>
-                    <button className='btn-register'>Register</button>
+                    <button className='btn-register' onClick={onRegisterClick}>Register</button>
                 </div>
             </div>
         </>
